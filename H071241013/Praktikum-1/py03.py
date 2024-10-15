@@ -1,6 +1,6 @@
-print("Konversi detik ke jam")
+print("konversi jam ke detik:")
 
-x = int(input("Masukkan jumlah detik: "))
+x = int(input("masukkan jumlah detik:"))
 
 jam = x//3600
 menit = (x%3600)//60
