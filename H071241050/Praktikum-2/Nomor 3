@@ -1,0 +1,21 @@
+nilai_akhir = float(input("Masukkan nilai akhir: "))
+if nilai_akhir > 100 or nilai_akhir < 0 :
+    print("inputan tidak valid")
+    exit()
+
+else:
+    kehadiran = float(input("Masukkkan presentase kehadiran: "))
+    tugas_tambahan = float(input("Masukkan nilai rata-rata tugas tambahan: "))
+    
+    if kehadiran < 75:
+        status = "Tidak lulus: kehadiran kurang dari 75%"
+    elif nilai_akhir >= 85:
+        status = "Lulus dengan predikat A"
+    elif nilai_akhir >= 70:
+        status = "Lulus dengan predikat B"
+    elif nilai_akhir >= 60:
+        status = "Lulus dengan predikat C"
+    else:
+        status = "Lulus dengan predikat C" if tugas_tambahan >= 70 else "Tidak lulus"
+
+print(f"{status}")

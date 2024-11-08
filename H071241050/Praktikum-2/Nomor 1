@@ -1,0 +1,23 @@
+print("Program untuk menentukan jenis segitiga berdasarkan panjang sisi")
+
+a = int(input("Masukkan panjang sisi pertama: "))
+b = int(input("Masukkan panjang sisi kedua: "))
+c = int(input("Masukkan panjang sisi ketiga: "))
+
+def cek_valid_segitiga(a, b, c):
+    return a + b > c and a + c > b and b + c > a
+
+def jenis_segitiga(a, b, c):
+    if a == b == c:
+        print ("Segitiga Sama Sisi")
+    elif a == b or a == c or b == c:
+        print ("Segitiga Sama Kaki")
+    else:
+        print("Segitiga Sembarang") 
+
+if cek_valid_segitiga(a, b, c):
+    jenis_segitiga(a, b, c)
+elif a<0 or b<0 or c<0 :
+   print("Invalid karena ada input dibawah 0")
+else:
+    print("Tidak dapat membentuk segitiga yang valid")
