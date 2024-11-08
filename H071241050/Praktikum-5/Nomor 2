@@ -1,0 +1,8 @@
+def acronym () :
+    kalimat = input("Masukkan string ")
+    acronym = ""
+    for karakter in kalimat.split(): #membagi/memisahkan string berdasarkan spasi
+        acronym = acronym + karakter[0].upper() #indeks 0 untuk mengambil karakter pertama, capitalize itu agar kalau user inputnya awalan huruf kecil outputnya tetap capital
+    print(acronym)
+
+acronym()

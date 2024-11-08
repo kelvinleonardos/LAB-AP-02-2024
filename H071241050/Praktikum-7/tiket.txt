@@ -1,0 +1,4 @@
+ID Tiket: TICK123
+Film: horor
+Waktu: 12.00
+==============================

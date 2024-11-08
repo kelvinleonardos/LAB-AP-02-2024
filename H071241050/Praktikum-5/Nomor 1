@@ -1,0 +1,9 @@
+def palindrome(kata):
+    kata = kata.lower()
+    reversed_kata = kata[::-1]
+    if kata == reversed_kata:
+        print("palindrome")
+    else: 
+        print("bukan palindrome")
+    print(reversed_kata)
+palindrome("aku") 

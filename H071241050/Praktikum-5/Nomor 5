@@ -1,0 +1,34 @@
+# Fungsi untuk mengenkripsi string menggunakan Caesar Cipher
+def caesar_cipher_enkripsi(teks, shift):
+    hasil = ""  # Variabel untuk menyimpan hasil enkripsi
+    
+    # Looping untuk setiap karakter dalam string
+    for karakter in teks:
+        # Jika karakter adalah huruf kecil
+        if karakter.islower():
+            # Menggeser karakter dengan 'shift' dan melingkar kembali jika melampaui 'z'
+            hasil += chr((ord(karakter) - ord('a') + shift) % 26 + ord('a'))
+        
+        # Jika karakter adalah huruf besar
+        elif karakter.isupper():
+            # Menggeser karakter dengan 'shift' dan melingkar kembali jika melampaui 'Z'
+            hasil += chr((ord(karakter) - ord('A') + shift) % 26 + ord('A'))
+        
+        # Jika karakter adalah angka, tetap tidak berubah
+        elif karakter.isdigit():
+            # Menambahkan angka langsung tanpa perubahan
+            hasil += karakter
+        
+        # Jika karakter adalah karakter spesial (non-alfabet), tetap tidak berubah
+        else:
+            hasil += karakter
+    
+    return hasil
+
+# Input dari pengguna
+teks = input("Masukkan teks yang ingin dienkripsi: ")
+shift = int(input("Masukkan jumlah pergeseran (shift): "))
+
+# Memanggil fungsi enkripsi dan menampilkan hasilnya
+hasil_enkripsi = caesar_cipher_enkripsi(teks, shift)
+print("Hasil enkripsi:", hasil_enkripsi)
