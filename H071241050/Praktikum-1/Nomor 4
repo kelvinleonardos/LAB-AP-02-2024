@@ -1,7 +1,7 @@
 print("Konversi Suhu dari Celcius ke Kelvin, Reamur dan Fahrenheit")
 celcius = int(input("Masukkan Suhu dalam Celcius: "))
 
-k = (celcius+273)
+k = int(celcius+273)
 r = int(celcius*4/5)
 f = int(celcius*9/5+32)
 
