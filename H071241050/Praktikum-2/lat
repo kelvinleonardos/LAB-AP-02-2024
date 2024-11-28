@@ -1,0 +1,8 @@
+n = 1
+while n <= 8:
+    print(f"baris ke: {n}")
+    n += 2
+
+n = 1
+while n <= 8:
+    print(f"baris ke: {n}")
